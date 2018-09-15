@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{%block content%}
+<h2>Lab Programs to work on</h2><br><br>
+<h5> 1)BASIC PYTHON PROGRAM </h5>
+<br>
+n=int(input("Enter the number of elements to be inserted: "))<br>
+a=[]<br>
+for i in range(0,n):<br>
+    elem=int(input("Enter element: "))<br>
+    a.append(elem)<br>
+avg=sum(a)/n<br>
+print("Average of elements in the list",round(avg,2))
+<br><br><br>
+<h5>2)PYTHON PROGRAM TO SWAP TWO VARIABLES</h5><br>
+
+# To take input from the user<br>
+# x = input(&#39;Enter value of x: &#39;)<br>
+# y = input(&#39;Enter value of y: &#39;)<br>
+
+x = 5<br>
+y = 10<br>
+
+# create a temporary variable and swap the values<br>
+temp = x<br>
+x = y<br>
+y = temp<br>
+
+print(&#39;The value of x after swapping: {}&#39;.format(x))<br>
+print(&#39;The value of y after swapping: {}&#39;.format(y))<br>
+
+	<br><br>
+	<h5>3)PYTHON PROGRAM TO CHECK WHETHER THE GIVEN INPUT IS LEAP YEAR OR NOT</h5><br>
+
+year = 2000<br>
+
+# To get year (integer input) from the user<br>
+# year = int(input(&quot;Enter a year: &quot;))<br>
+
+if (year % 4) == 0:<br>
+   if (year % 100) == 0:<br>
+       if (year % 400) == 0:<br>
+           print(&quot;{0} is a leap year&quot;.format(year))<br>
+       else:<br>
+           print(&quot;{0} is not a leap year&quot;.format(year))<br>
+   else:<br>
+       print(&quot;{0} is a leap year&quot;.format(year))<br>
+else:<br>
+   print(&quot;{0} is not a leap year&quot;.format(year))
+	
+<br><br>
+<h5>4)PYTHON PROGRAM TO FIND FACTORIAL OF A GIVEN NUMBER</h5><br>
+
+# change the value for a different result<br>
+num = 7<br>
+
+# uncomment to take input from the user<br>
+#num = int(input(&quot;Enter a number: &quot;))<br>
+
+factorial = 1<br>
+
+# check if the number is negative, positive or zero<br>
+if num &lt; 0:<br>
+   print(&quot;Sorry, factorial does not exist for negative numbers&quot;)<br>elif num == 0:<br>
+   print(&quot;The factorial of 0 is 1&quot;)<br>
+else:<br>
+   for i in range(1,num + 1):<br>
+       factorial = factorial*i<br>
+   print(&quot;The factorial of&quot;,num,&quot;is&quot;,factorial)
+
+<br><br>
+   <h5>5) PYTHON PROGRAM TO MAKE SIMPLE CALCULATOR</h5>
+   <br>
+# This function adds two numbers <br>
+def add(x, y):<br>
+   return x + y<br>
+
+# This function subtracts two numbers<br> 
+def subtract(x, y):<br>
+<br>
+   return x - y<br>
+
+# This function multiplies two numbers<br>
+def multiply(x, y):<br>
+   return x * y<br>
+
+# This function divides two numbers<br>
+def divide(x, y):<br>
+   return x / y<br>
+
+print(&quot;Select operation.&quot;)<br>
+print(&quot;1.Add&quot;)<br>
+print(&quot;2.Subtract&quot;)<br>
+print(&quot;3.Multiply&quot;)<br>
+print(&quot;4.Divide&quot;)<br>
+
+# Take input from the user<br> 
+choice = input(&quot;Enter choice(1/2/3/4):&quot;)<br>
+
+num1 = int(input(&quot;Enter first number: &quot;))<br>
+num2 = int(input(&quot;Enter second number: &quot;))<br>
+
+if choice == &#39;1&#39;:<br>
+   print(num1,&quot;+&quot;,num2,&quot;=&quot;, add(num1,num2))<br>
+
+elif choice == &#39;2&#39;:<br>
+   print(num1,&quot;-&quot;,num2,&quot;=&quot;, subtract(num1,num2))<br>
+
+elif choice == &#39;3&#39;:<br>
+   print(num1,&quot;*&quot;,num2,&quot;=&quot;, multiply(num1,num2))<br>
+
+elif choice == &#39;4&#39;:<br>
+   print(num1,&quot;/&quot;,num2,&quot;=&quot;, divide(num1,num2))<br>
+else:<br>
+   print(&quot;Invalid input&quot;)<br>
+
+   
+{%endblock%}
